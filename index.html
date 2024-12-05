@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Arquitectónico: Casa Verde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        h2, h3 {
+            color: #4CAF50;
+        }
+
+        .accordion {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ddd;
+        }
+
+        .panel {
+            padding: 10px;
+            display: none;
+            background-color: #f9f9f9;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* Efectos de deslizamiento suave */
+        .fadeIn {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Proyecto Arquitectónico: Casa Verde
+</header>
+
+<section class="fadeIn">
+    <h2>1. Información General del Proyecto</h2>
+    <ul>
+        <li><strong>Nombre del Proyecto:</strong> Casa Verde</li>
+        <li><strong>Tipología:</strong> Vivienda Unifamiliar Sustentable</li>
+        <li><strong>Ubicación:</strong> Zona Mediterránea (ejemplar adaptable)</li>
+        <li><strong>Superficie de Terreno:</strong> 450 m²</li>
+        <li><strong>Superficie Construida:</strong> 220 m²</li>
+        <li><strong>Año de Diseño:</strong> 2024</li>
+    </ul>
+</section>
+
+<section class="fadeIn">
+    <h2>2. Concepto Arquitectónico</h2>
+    <p>La propuesta "Casa Verde" integra principios de arquitectura bioclimática y sostenibilidad, maximizando eficiencia energética y confort térmico mediante diseño pasivo y tecnologías ecológicas.</p>
+</section>
+
+<section class="fadeIn">
+    <h2>3. Memoria Descriptiva</h2>
+    <button class="accordion">3.1 Emplazamiento</button>
+    <div class="panel">
+        <ul>
+            <li>Orientación optimizada para aprovechamiento solar</li>
+            <li>Implantación que respeta topografía natural</li>
+            <li>Mínima intervención del paisaje existente</li>
+        </ul>
+    </div>
+
+    <button class="accordion">3.2 Zonificación</button>
+    <div class="panel">
+        <ul>
+            <li><strong>Zona Social:</strong> 65 m²</li>
+            <li><strong>Zona Privada:</strong> 90 m²</li>
+            <li><strong>Zona de Servicio:</strong> 35 m²</li>
+            <li><strong>Circulaciones:</strong> 30 m²</li>
+        </ul>
+    </div>
+</section>
+
+<section class="fadeIn">
+    <h2>5. Sistemas Sustentables</h2>
+    <button class="accordion">5.1 Energía</button>
+    <div class="panel">
+        <ul>
+            <li>Paneles solares fotovoltaicos</li>
+            <li>Calentador solar de agua</li>
+            <li>Iluminación LED</li>
+            <li>Medidores de consumo inteligentes</li>
+        </ul>
+    </div>
+
+    <button class="accordion">5.2 Agua</button>
+    <div class="panel">
+        <ul>
+            <li>Sistema de recolección de agua lluvia</li>
+            <li>Tratamiento y reutilización de aguas grises</li>
+            <li>Jardín con especies xerófitas</li>
+            <li>Sistema de riego por goteo</li>
+        </ul>
+    </div>
+</section>
+
+<section class="fadeIn">
+    <h2>6. Especificaciones Técnicas</h2>
+    <p>Detalles de la estructura, materiales y carpintería que garantizan la sustentabilidad de la Casa Verde.</p>
+</section>
+
+<button class="button">Solicita más información</button>
+
+<script>
+    // Función para abrir y cerrar el contenido del acordeón
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
